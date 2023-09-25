@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { getUrls, postUrls } from '../../apiCalls';
+import { deleteUrl, getUrls, postUrls } from '../../apiCalls';
 import UrlContainer from '../UrlContainer/UrlContainer';
 import UrlForm from '../UrlForm/UrlForm';
 
@@ -27,7 +27,7 @@ function App () {
         <UrlForm addUrl={addUrl}/>
       </header>
       {error && <p>{error}</p>}
-      {!error &&  <UrlContainer urls={urls}/>}
+      {!error &&  <UrlContainer urls={urls} />}
     </main>
   );
 }
